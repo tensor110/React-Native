@@ -9,10 +9,16 @@ export default function FlexBoxes({children, style}) {
 }
 
 const styles = StyleSheet.create({
-  box: { flex: 1, backgroundColor: "plum", padding: 30 },
+  box: { 
+    backgroundColor: "plum", 
+    padding: 30,
+    width: 200,
+    height: 200
+  },
   text: {
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
+    color: 'white'
   },
 });
