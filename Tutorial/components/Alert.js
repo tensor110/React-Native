@@ -1,6 +1,6 @@
 import {View, Alert, Button} from 'react-native'
 
-export default function Views(){
+export default function Alerts(){
   return(
     <View style= {{flex: 1, backgroundColor: 'blue', display: 'flex', justifyContent: 'center', alignItems:'center'}}>
       <Button title='Alert' onPress= {() => Alert.alert("Invalid data!")} />

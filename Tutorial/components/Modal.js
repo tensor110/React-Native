@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { View, Button, 
-Modal, Text } from "react-native";
+import { View, Button, Modal, Text } from "react-native";
 
-export default function Buttons() {
+export default function Modals() {
     const [isModalVisible, setIsModalVisible] = useState(false)
   return (
     <View
