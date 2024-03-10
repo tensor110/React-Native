@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet} from 'react-native'
+import {View, Text, StyleSheet, Dimensions} from 'react-native'
 
 export default function Views(){
   return(
@@ -10,6 +10,9 @@ export default function Views(){
   )
 }
 
+const windowWidth = Dimensions.get("window").width;
+const windowHeight = Dimensions.get("window").height;
+
 const styles = StyleSheet.create({
     container: {
         flex: 1, 
@@ -19,13 +22,13 @@ const styles = StyleSheet.create({
         padding: 30
     },
     box:{
-        width: 300,
-        height: 300,
-        backgroundColor: 'ligthblue',
+        width: windowWidth > 500 ? "70%" : "90%",
+        height: windowHeight > 600 ? "60%" : "90%",
+        backgroundColor: 'white',
         alignItems: 'center',
         justifyContent: 'center'
     },
     text:{
-        fontSize: 24
+        fontSize: windowWidth > 500 ? 50 : 24,
     }
 })
