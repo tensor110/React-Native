@@ -12,7 +12,7 @@ export default function ActivityIndicators() {
       }}
     >
       {/* <ActivityIndicator /> */}
-      <ActivityIndicator size="large" color="black"/>
+      <ActivityIndicator size="large" color="black" animating={false}/>
     </View>
   );
 }

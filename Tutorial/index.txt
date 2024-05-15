@@ -1,0 +1,26 @@
+1. Components
+    View
+    Text
+    Image
+    Scroll View
+    Button
+    Pressable
+    Modal
+    Status Bar
+    Activity Indicator
+    Alert
+    Custom Components
+2. Styles
+    StyleSheet API
+    Multiple Styles
+    Box Model
+3. Flexbox
+    Flexbox
+4. Dimension 
+    Dimension API
+    useWindowDimensions
+    safeAreaView
+    Platform Specific code
+5. Pokemon Card
+6. 
+
