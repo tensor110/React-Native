@@ -22,5 +22,6 @@
     safeAreaView
     Platform Specific code
 5. Pokemon Card
-6. 
+6. List
+    
 
