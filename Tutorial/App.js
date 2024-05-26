@@ -3,6 +3,7 @@ import Styles from './Styles'
 import Dimension from '../Tutorial/Dimension'
 import Lists from "./List"
 import FormInputs from './Forms'
+import Network from "./Networking"
 
 export default function App(){
   return(
@@ -10,6 +11,7 @@ export default function App(){
       // <Styles />
       // <Dimension/>
       // <Lists/>
-      <FormInputs/>
+      // <FormInputs/>
+      <Network />
   )
 }
