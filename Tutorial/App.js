@@ -4,6 +4,9 @@ import Dimension from '../Tutorial/Dimension'
 import Lists from "./List"
 import FormInputs from './Forms'
 import Network from "./Networking"
+import StackNavigation from './StackNavigation'
+import DrawerNavigation from './DrawerNavigation'
+import TabNavigation from './TabNavigation'
 
 export default function App(){
   return(
@@ -12,6 +15,9 @@ export default function App(){
       // <Dimension/>
       // <Lists/>
       // <FormInputs/>
-      <Network />
+      // <Network />
+      // <StackNavigation/>
+      // <DrawerNavigation />
+      <TabNavigation/>
   )
 }
