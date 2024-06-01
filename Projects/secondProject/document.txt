@@ -1,0 +1,19 @@
+Create App - npx react-native@latest init secondProject
+
+gradle issue resolve- distributionUrl=https://services.gradle.org/distributions/gradle-8.5-all.zip
+                      in \android\gradle\wrapper\gradle-wrapper.properties
+
+Nativewind Installation - npm install nativewind
+                          npm install --save-dev tailwindcss@3.3.2
+                          npx tailwindcss init
+                    In tailwind.config.js file
+                    content: ["./App.{js,jsx,ts,tsx}", "./<custom-folder>/**/*.{js,jsx,ts,tsx}"],
+
+                    In babel.config.js file: 
+                   + plugins: ["nativewind/babel"],
+react native progress - npm i react-native-progress
+react native svg - npm i react-native-svg
+react native async storage - npm i @react-native-async-storage/async-storage
+react native navigation - npm install @react-navigation/native
+                          npm install react-native-screens react-native-safe-area-context
+                          npm install @react-navigation/native-stack
