@@ -6,7 +6,10 @@ import {
   Image,
   TouchableOpacity,
   ScrollView,
+  KeyboardAvoidingView,
+  Platform
 } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import React, {useCallback, useEffect, useState} from 'react';
 import {StatusBar} from 'expo-status-bar';
 import {theme} from '../theme';
@@ -23,7 +26,7 @@ export default function Home() {
   const [weather, setWeather] = useState({})
   const [loading, setLoading] = useState(true)
 
-  const handleLocation = loc => {
+  const handleLocation = (loc) => {
     setLocations([]);
     toggleSearch(false)
     setLoading(true)
@@ -44,6 +47,9 @@ export default function Home() {
     }
   }
 
+  useEffect(()=>{
+    fetchMyWeatherData();
+  }, [])
   const fetchMyWeatherData = async () =>{
     let myCity = await getData('city');
     let cityName = "Lahore"
@@ -56,10 +62,6 @@ export default function Home() {
       setLoading(false)
     })
   }
-
-  useEffect(()=>{
-    fetchMyWeatherData();
-  })
 
   const handleTextDebounce = useCallback(debounce(handleSearch, 1200), [])  
 
@@ -80,7 +82,8 @@ export default function Home() {
           </View>
         ):
         (
-          <SafeAreaView className="flex flex-1">
+          <KeyboardAwareScrollView className="flex">
+          <SafeAreaView className="flex flex-1 space-y-4">
           <View style={{height: '7%'}} className="mx-4 mt-4 relative z-50">
             <View
               className="flex-row justify-end items-center rounded-full"
@@ -129,7 +132,7 @@ export default function Home() {
               </View>
             ) : null}
           </View>
-          <View className="mx-4 flex flex-1 justify-around mb-2">
+          <View className="mx-4 flex flex-1 justify-around mb-2 space-y-8">
             <Text className="text-white text-center text-2xl font-bold">
               {location?.name}, 
               <Text className="text-lg font-semibold text-gray-300">
@@ -214,6 +217,7 @@ export default function Home() {
             </View>
           </View>
         </SafeAreaView>
+        </KeyboardAwareScrollView>
         )
       }
 
